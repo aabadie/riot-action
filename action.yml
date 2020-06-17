@@ -1,0 +1,9 @@
+name: 'RIOT action'
+description: 'Perform static tests and basic build on RIOT'
+inputs:
+  command:
+    description: 'Command to launch'
+    required: true
+runs:
+  using: 'docker'
+  image: 'aabadie/riot-actions:latest'
