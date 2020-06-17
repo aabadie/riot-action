@@ -1,4 +1,4 @@
-from ubuntu:bionic
+FROM ubuntu:bionic
 
 LABEL "version"="1.0.0"
 LABEL "repository"="https://github.com/aabadie/riot-actions"
@@ -17,9 +17,7 @@ ENV LANG C.UTF-8
 
 RUN \
     dpkg --add-architecture i386 >&2 && \
-    echo 'Update the package index files to latest available versions' >&2 && \
-    apt-get update \
-    && echo 'Installing native toolchain and build system functionality' >&2 && \
+    apt-get update && \
     apt-get -y --no-install-recommends install \
         build-essential \
         cmake \
@@ -29,6 +27,7 @@ RUN \
         doxygen \
         git \
         graphviz \
+        pcregrep \
         python3 \
         python3-pip \
         python3-setuptools \
@@ -40,9 +39,8 @@ RUN \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY requirements.txt /tmp/requirements.txt
-RUN echo 'Installing python3 packages' >&2 \
-    && pip3 install --no-cache-dir -r /tmp/requirements.txt \
-    && rm /tmp/requirements.txt
+RUN pip3 install --no-cache-dir -r /tmp/requirements.txt && \
+    rm -f /tmp/requirements.txt
 
 COPY entrypoint.sh /
 
