@@ -1,8 +1,8 @@
 FROM ubuntu:bionic
 
 LABEL "version"="1.0.0"
-LABEL "repository"="https://github.com/aabadie/riot-actions"
-LABEL "homepage"="https://github.com/aabadie/riot-actions"
+LABEL "repository"="https://github.com/aabadie/riot-action"
+LABEL "homepage"="https://github.com/aabadie/riot-action"
 LABEL "maintainer"="Alexandre Abadie <alexandre.abadie@inria.fr>"
 
 LABEL "com.github.actions.name"="GitHub Action for RIOT-OS"
