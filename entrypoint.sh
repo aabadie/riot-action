@@ -2,4 +2,4 @@
 
 set -e
 
-cd ${GITHUB_WORKSPACE} && bash -c "$1"
+cd ${GITHUB_WORKSPACE} && bash -c "$*"
