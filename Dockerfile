@@ -19,6 +19,7 @@ RUN \
     dpkg --add-architecture i386 >&2 && \
     apt-get update && \
     apt-get -y --no-install-recommends install \
+        autoconf \
         build-essential \
         cmake \
         coccinelle \
