@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:18.04
 
 LABEL "version"="1.0.0"
 LABEL "repository"="https://github.com/aabadie/riot-action"
@@ -23,30 +23,15 @@ RUN \
         automake \
         build-essential \
         cmake \
-        coccinelle \
-        curl \
-        cppcheck \
-        doxygen \
         git \
-        graphviz \
         libhidapi-dev \
         libtool \
-        libusb-1.0-0-dev \
         libudev-dev \
-        pcregrep \
-        python3 \
-        python3-pip \
-        python3-setuptools \
-        python3-wheel \
-        vera++ \
-        wget \
-        xsltproc && \
+        libusb-1.0-0-dev \
+        libusb-dev \
+        pkg-config && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-COPY requirements.txt /tmp/requirements.txt
-RUN pip3 install --no-cache-dir -r /tmp/requirements.txt && \
-    rm -f /tmp/requirements.txt
 
 COPY entrypoint.sh /
 
