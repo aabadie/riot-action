@@ -30,6 +30,7 @@ RUN \
         git \
         graphviz \
         libhidapi-dev \
+        libtool \
         libusb-1.0-0-dev \
         libudev-dev \
         pcregrep \
