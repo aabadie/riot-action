@@ -27,6 +27,9 @@ RUN \
         doxygen \
         git \
         graphviz \
+        libhidapi-dev \
+        libusb-1.0-0-dev \
+        libudev-dev \
         pcregrep \
         python3 \
         python3-pip \
