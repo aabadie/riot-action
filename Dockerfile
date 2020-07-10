@@ -15,13 +15,12 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 
-RUN \
-    dpkg --add-architecture i386 >&2 && \
-    apt-get update && \
+RUN apt-get update && \
     apt-get -y --no-install-recommends install \
         autoconf \
         automake \
         build-essential \
+        ca-certificates \
         cmake \
         git \
         libhidapi-dev \
