@@ -20,6 +20,7 @@ RUN \
     apt-get update && \
     apt-get -y --no-install-recommends install \
         autoconf \
+        automake \
         build-essential \
         cmake \
         coccinelle \
