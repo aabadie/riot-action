@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 LABEL "version"="1.0.0"
 LABEL "repository"="https://github.com/aabadie/riot-action"
